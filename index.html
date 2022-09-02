@@ -19,20 +19,117 @@
 	<body>
 
 
+		
+
+
+
+
+
+			<div class="container-audio">
+
+
+
+				<audio id="myAudio">
+
+
+					<source src="./audio/windows_notificacion.mp3" type="audio/mpeg">
+
+				</audio>
+		
+			</div>
+
+
+
+
+			<div class="container-audio-two">
+
+
+				<audio id="audioTwo">
+
+
+					<source src="./audio/whatsapp_notificacion_de_chat_symbian.mp3" type="audio/mpeg" >
+
+
+				</audio>
+
+				
+			</div>
+
+
+
+
+
+
+
+
+		<!-- CONTAINER FATHER ICON CHAT START -->
+
+
+		<div class="container-global">
+
+
+			<div class="content-global">
+
+
+				<div class="global-question">
+			
+
+
+					<span>¡Bienvenidos! 🤠¿Qué te trae a Fe y Alegría 74 hoy?</span>
+
+
+
+				</div>
+
+
+				<div class="global-icon">
+				
+
+					<p><i class="fa-solid fa-comments"></i></p>
+
+
+				</div>
+
+
+
+				<div class="global-content">
+					
+				</div>
+
+				
+			</div>
+			
+		</div>
+
+
+
+
+
+
+
+
+
 
 		<!-- SECTION -->
 
 		<div class="container-bot">
 
-
-
 			<!-- BEGIN MENU -->
+
+
+
+
 
 
 			<div class="content-bot">
 
 
+
+
 				<div class="container-menu">
+
+
+
 
 
 					<div class="content-icon">
@@ -43,6 +140,7 @@
 					</div>
 
 
+	
 
 					<div class="medium-logo">
 
@@ -52,28 +150,27 @@
 							<p class="text-bot-logo-medium">Fe y Alegría 74 Chat</p>
 							
 						</div>
-						
+
+
+					
 					</div>
 
 
 
 
-					<div class="content-search">
-						
+			
+						<div class="container-minimizer">
+
+							<div class="content-minimizer">
 
 
-					
-						<p class="insert-search"> <input type="text" value="" name="" id="" placeholder="Buscar ..."/></p>
-					
-						<p class="icon-search"><i class="fa-solid fa-magnifying-glass"></i></p>
-
-
+								<p class="mini"><i class="fa-solid fa-window-minimize"></i></p>
+								<p class="close"><i class="fa-solid fa-xmark"></i></p>
+								
+							</div>
 							
-
-
-					</div>
-
-
+						</div>
+	
 
 
 				
@@ -100,26 +197,28 @@
 
 						<div class="back">
 						
+							<p><i class="fa-solid fa-arrow-left-long"></i></p>
 
 
-							<a href="index.html" target="_blank"> 
+
+						</div>
 
 
-							<p><i class="fa-solid fa-arrow-left-long"></i> Regresar</p>
+						<div class="home">
+					
+
+							<a href="index.html" target="">
+
+
+
+
+							<p class="iconHome">Inicio <i class="fa-solid fa-house"></i></p>
 
 
 
 							</a>
 
 
-
-
-						</div>
-
-						<div class="home">
-						
-
-							<p>Inicio <i class="fa-solid fa-house"></i></p>
 
 						</div>
 						
@@ -141,7 +240,7 @@
 						<p class="text-name">FE Y ALEGRIA 74 BOT</p>
 
 
-						<p class="comenzar-consultas-button"><button>COMENZAR CON LAS CONSULTAS</button></p>
+						<p class="comenzar-consultas-button"><button>COMENZAR</button></p>
 					</div>
 
 
@@ -195,7 +294,7 @@
 
 
 					
-							<ul>
+							<ul class="listFirst">
 
 
 
@@ -208,22 +307,19 @@
 
 
 								
-								<li> <span class="alternatives">A</span>: Informacion sobre matriculas.</li>
-								<li><span class="alternatives">B</span>: Información del directorio del instituto.</li>
-								<li><span class="alternatives">C</span>: Horario de estudio.</li>
-								<li><span class="alternatives">H</span>: Contactar con un asesor via WhatsApp.</li>
+								<li> <span class="alternatives">A</span>: Informacion sobre las mastriculas.</li>
+								<li><span class="alternatives">B</span>: informacion sobre el directorio del instituto.</li>
+								<li><span class="alternatives">C</span>: Horarios de estudios.</li>
+								<li><span class="alternatives">D</span>: Carreras</li>
+								<li><span class="alternatives">E</span>: Informacion sobre los tramites para obtener los titulos.</li>
 
+
+								<li><span class="alternatives">F: </span>Tipos de tramites - GUIA</li>
+
+								<li><span class="alternatives">G:</span>Contactar con un encargado</li>
 
 
 								
-
-
-
-
-
-
-
-
 							</ul>
 
 
@@ -243,23 +339,24 @@
 					<div class="container-aswer-bot">
 
 						<div class="content-aswer-bot">
-						
-							<div class="bot">
-							
+					
 
-								<p> <img src="./img/logoBot/logoBot.svg" alt=""/></p>
 
-								<p class="text-quad-bot">
+							<div class="bot" id="allCircle">
 
-Inscripción en línea: desde el viernes 6 de mayo de 2022 </br>
-hasta el miércoles 20 de julio, 18.00 horas </br>
-(a través de la página web de la Universidad)</br>
-<strong>Examen de admisión (presencial):</strong></br> domingo 24 de julio de 2022, 7.00 horas</br>
-<strong>Publicación de resultados:</strong></br> domingo 24 de julio de 2022, 19.00 horas</br> (a través de la página web de la Universidad)</br>
-Envío electrónico de material de matrícula: lunes 25 de julio de 2022, 15.00 horas</br>
+									<p> <img src="./img/logoBot/logoBot.svg" alt=""/></p>
+	
+								<p class="text-quad-bot" id="alternativeCircle">
 
+
+									<span class="oneCircle"><i class="fa-solid fa-circle"></i></span>
+									<span class="twoCircle"><i class="fa-solid fa-circle"></i></span>
+									<span class="treeCircle"><i class="fa-solid fa-circle"></i></span>
 
 								</p>
+
+
+
 
 
 
@@ -270,13 +367,157 @@ Envío electrónico de material de matrícula: lunes 25 de julio de 2022, 15.00 
 
 
 
+
+
+							<div class="bot" id="textA">
+							
+
+
+
+
+
+								<p> <img src="./img/logoBot/logoBot.svg" alt=""/></p>
+
+								<p class="text-quad-bot" id="alternativeA">
+								<strong>FE Y ALEGRIA 74</strong></br>
+								Los horarios establecidos son : </br>
+								Mañana : 7.00 AM </br>
+								Tarde : 12.00 AM </br>
+								Noche: 7.00 PM </br>
+
+
+
+								</p>
+
+
+
+
+
+								<p class="text-quad-bot" id="alternativeB">
+
+
+
+
+
+									Has selecionado la alternativa B
+
+
+
+
+
+
+								</p>
+
+
+
+								<p class="text-quad-bot" id="alternativeC">
+
+
+
+
+									Has selecionado la alternativa C
+
+
+
+
+								</p>
+
+
+
+								<p class="text-quad-bot" id="alternativeD">
+
+
+
+
+
+
+								Has selecionado la alternativa D
+
+
+
+								</p>
+
+
+
+
+								<p class="text-quad-bot" id="alternativeE">
+
+
+
+
+
+
+								</p>
+
+
+
+
+								<p class="text-quad-bot" id="alternativeF">
+
+
+
+									<span class="tipoTramite">TIPO DE TRÁMITES <i class="fa-regular fa-circle-check"></i></span>
+
+
+
+								</p>
+
+
+
+								<p class="text-quad-bot" id="alternativeG">
+
+
+
+								alternativa G
+
+
+								</p>
+
+
+
+
+
+
+
+
+
+
+
+
+							</div>
+
+
+
+								<div class="pdf-img">
+
+									<ul>
+										<li class="download-pdf"> <a href="download/manual.pdf" download="Tipos de tramites.pdf" target="_blank"><i class="fa-solid fa-download"></i> Descargar PDF - Tipos de tramites</a></li>
+										<li><span class="vista-previa">Vista previa: </span></li>
+										<li><img src="./img/prueba.png" alt=""></li>
+										<li><img src="./img/tramite-7.png" alt=""></li>
+										<li><img src="./img/tramite-8.png" alt=""></li>
+										<li><img src="./img/tramite-9.png" alt=""></li>
+										<li><img src="./img/tramite-10.png" alt=""></li>
+										<li><img src="./img/tramite-11.png" alt=""></li>
+										<li><img src="./img/tramite-12.png" alt=""></li>
+										<li><img src="./img/tramite-13.png" alt=""></li>
+
+									</ul>
+									
+								</div>
+	
+
+
+
+
+
+
 							<div class="user">
 
 
-
-
 								<ul class="ul-add">
-									
+
+
 
 
 
@@ -312,6 +553,20 @@ Envío electrónico de material de matrícula: lunes 25 de julio de 2022, 15.00 
 
 
 				<div class="container-button-start">
+
+					<div class="container-error">
+
+
+						
+							<p class="textError">
+
+							Escriba correctamente la "LETRA" correctamente
+
+
+
+							</p>
+						
+					</div>
 
 
 					<div class="content-button-start">
@@ -399,6 +654,9 @@ Envío electrónico de material de matrícula: lunes 25 de julio de 2022, 15.00 
 
 
 
+
+
+	
 
 
 

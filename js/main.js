@@ -13,6 +13,29 @@ window.addEventListener('load', ()=>{
 	var containerInformation = document.querySelector('.container-information');
 
 
+	var containerClose = document.querySelector('.close > i');
+
+	var containerMini = document.querySelector('.mini > i');
+
+
+	var listFirst = document.querySelectorAll('li > span');
+
+
+
+	var pdfImg = document.querySelector('.pdf-img')
+
+	var back = document.querySelector('.back');
+
+
+	var listContentText = document.querySelector('.list-content-text');
+
+
+	var botList = document.querySelectorAll('.bot > p');
+
+	var containerOnlyBot = document.querySelector('.bot')
+
+	var iconHome = document.querySelector('.iconHome');
+
 
 	var contentLogoBot = document.querySelector('.content-logoBot');
 
@@ -23,6 +46,9 @@ window.addEventListener('load', ()=>{
 
 
 	const ulAdd = document.querySelector('.ul-add');
+
+	var ulAddLi = document.querySelector('ul-add > ul');
+
 
 	var contentAswer = document.querySelector('.content-aswer-bot');
 
@@ -43,16 +69,104 @@ window.addEventListener('load', ()=>{
 
 	var buttonTwo = document.querySelector('#sendTwo');
 
+	var containerError = document.querySelector('.container-error')
 
 
 	var textQuadUser = document.querySelector('.text-quad-user');
 
 
+	var textError = document.querySelector('.textError')
 
 	var user = document.querySelector('.user');
 
+	
 	var ingrese = document.querySelector('.ingrese');
 
+	var textA = document.querySelector('#textA')
+
+	var globalQuestion = document.querySelector('.global-question')
+
+
+	var containerBot = document.querySelector('.container-bot');
+
+
+	var alternativeB = document.querySelector('#alternativeB');
+	var alternativeA = document.querySelector('#alternativeA');
+	var alternativeC = document.querySelector('#alternativeC');
+	var alternativeD = document.querySelector('#alternativeD');
+	var alternativeE = document.querySelector('#alternativeE');
+
+	var alternativeF = document.querySelector('#alternativeF');
+	var alternativeG = document.querySelector('#alternativeG');
+
+	var containerGlobal = document.querySelector('.container-global')
+
+	var globalIcon = document.querySelector('.global-icon')
+
+	var allcircle = document.querySelector('#allCircle');
+
+
+
+	var myAudio = document.getElementById('myAudio');
+
+	var audioTwo  = document.getElementById('audioTwo')
+
+
+
+	function playAudioTwo(){
+
+
+
+		audioTwo.play();
+
+
+
+	}
+
+
+
+	function playAudio(){
+
+
+
+		myAudio.play();
+
+
+
+	};
+
+
+
+
+
+	containerMini.addEventListener('click', ()=>{
+
+
+		containerBot.style.opacity = 0;
+
+
+		containerGlobal.style.display = "block";
+
+
+
+	});
+
+
+
+
+
+	containerClose.addEventListener('click', ()=>{
+
+
+		containerBot.style.opacity = 0;
+
+
+		containerGlobal.style.display = "block";
+
+
+
+
+	});
 
 
 
@@ -60,6 +174,184 @@ window.addEventListener('load', ()=>{
 
 
 
+
+
+	var stopCircle;
+
+
+	var showBot;
+
+
+	var containerShowTextBot;
+
+
+
+
+	function showTextBot() {
+
+
+
+	containerShowTextBot =	setTimeout(() => {
+		
+
+			allcircle.style.opacity = 0;
+
+
+
+			textA.style.opacity = 1;
+
+
+
+
+
+
+
+			playAudio()
+
+		}, 500);
+			
+
+
+	}
+	globalQuestion.addEventListener('click', ()=>{
+
+
+
+		containerBot.style.opacity = 1;
+		containerGlobal.style.display = "none"
+
+
+
+
+
+
+
+	});
+
+
+
+	globalIcon.addEventListener('click', ()=>{
+
+
+
+		containerBot.style.opacity = 1;
+		containerGlobal.style.display = "none"
+
+
+
+
+
+
+
+	});
+
+
+
+
+
+	
+
+
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+	//BOT LIST
+
+
+
+
+
+
+
+
+
+
+	// SCROLLDOWN 
+	
+
+
+
+	sendTwo.addEventListener('click', function(){
+
+
+
+		
+			
+
+
+ 			contentAswer.scrollTop = contentAswer.scrollHeight;
+		});
+
+
+
+
+	function returnBacker(){
+
+
+
+		back.addEventListener('click', ()=>{
+
+
+
+			send.style.display = "block";
+
+			sendTwo.style.display = "none"
+
+
+			containerAswer.style.display = "none";
+
+			containerInformation.style.display = "block";
+
+
+
+			containerReturn.style.display = "none";
+
+	
+
+
+
+			textA.style.opacity = 0;
+
+
+			allcircle.style.opacity = 1;
+
+			removeChild();
+
+
+			
+
+		})
+
+
+	};
 
 
 
@@ -90,6 +382,8 @@ window.addEventListener('load', ()=>{
 
 
 
+
+
 	// ALGORITM HTML
 
 	comenzarButton.addEventListener('click', ()=>{
@@ -102,7 +396,7 @@ window.addEventListener('load', ()=>{
 
 		contentLogoBot.style.display = "none";
 
-		containerReturn.style.display = "block";
+
 		containerButtonStart.style.display = "block";
 
 		mediumLogo.style.display = "block";
@@ -118,9 +412,6 @@ window.addEventListener('load', ()=>{
 	let letter = document.getElementById('letter');
 
 	var send = document.getElementById('send');
-
-
-
 
 
 
@@ -154,7 +445,6 @@ window.addEventListener('load', ()=>{
 
 		}
 
-
 	})
 
  
@@ -167,6 +457,22 @@ window.addEventListener('load', ()=>{
  
 
 // CONFI ENTER
+
+
+
+
+
+	// FUNCTION SCROLL 
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -192,12 +498,20 @@ window.addEventListener('load', ()=>{
 		user.style.opacity = 1;
 
 
-		const textInput = letter.value + " " + now;
+
+
+
+
+		const textInput = letter.value;
 
 		const li = document.createElement('li');
 
 		const p = document.createElement('p');
 
+
+		const icon = document.createElement('h3');
+
+		icon.textContent = now + " " + "✓✓"
 
 
 
@@ -209,12 +523,14 @@ window.addEventListener('load', ()=>{
 
 
 		li.appendChild(p)
-		
+	
+		li.appendChild(icon)
 
 
 		ulAdd.appendChild(li)
 
 
+		// ulAdd.removeChild(li)
 
 
 
@@ -234,6 +550,80 @@ window.addEventListener('load', ()=>{
 
 
 
+	// DUPLICATE
+
+
+
+
+
+
+
+
+
+	var removeOption;
+
+
+
+	// function removeChild
+
+
+
+
+
+	 function removeChild(){
+
+
+
+	removeOption = user.removeChild(ulAdd);
+
+
+		
+
+	 }
+
+	function addChildText (){
+
+
+
+
+		
+
+
+		user.appendChild(ulAdd)
+
+
+	}
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 
 	buttonTwo.addEventListener('click', ()=>{
@@ -241,7 +631,27 @@ window.addEventListener('load', ()=>{
 
 
 
+
+
+
+
+			playAudioTwo()	
+
+
 			createText();
+
+			addChildText()
+
+
+
+
+
+		
+
+		removeRespuesta()
+
+
+
 
 
 
@@ -250,6 +660,18 @@ window.addEventListener('load', ()=>{
 	});
 
 	
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -267,6 +689,11 @@ window.addEventListener('load', ()=>{
 
 
 
+		
+		containerReturn.style.display = "block";
+
+
+		returnBacker()
 
 
 
@@ -275,10 +702,25 @@ window.addEventListener('load', ()=>{
 
 
 
-	switch (letter.value) {
+	switch (letter.value.toLowerCase()) {
 
 		case 'a':
 
+
+
+
+			pdfImg.style.display = "none";
+
+
+
+
+			showTextBot()
+
+
+
+
+
+			containerError.style.display = "none";
 
 
 			
@@ -292,14 +734,35 @@ window.addEventListener('load', ()=>{
 			containerInformation.style.display = "none";
 
 
-			
+
+
+			alternativeA.style.display = "block";
+
+			alternativeB.style.display = "none";
+			alternativeC.style.display = "none";
+			alternativeD.style.display = "none";
+			alternativeE.style.display = "none";
+
+
+
+
+			alternativeE.style.display = "none";
+			alternativeF.style.display = "none";
+
+
+
+
+			alternativeG.style.display = "none"
+
+
+		
 
 
 
 
 			
 
-			console.log("HAS SELECIONADO LA LETRA 'A' ");
+
 
 
 
@@ -310,13 +773,55 @@ window.addEventListener('load', ()=>{
 
 		
 
+			pdfImg.style.display = "none";
+
+
+			showTextBot()
+
+
+
+
+
+			alternativeA.style.display = "none";
+
+
+
+			containerError.style.display = "none";
+
+			buttonTwo.style.display = "block";
+			send.style.display = "none";	
+
+		
 			containerAswer.style.display = "block";
 
-			containerInformation.style.display = "block";
+
+			containerInformation.style.display = "none";
+
+
+			alternativeB.style.display = "block";
 
 
 
-			console.log("HAS SELECIONADO LA LETRA 'b' ");
+			alternativeC.style.display = "none";
+			alternativeD.style.display = "none";
+			alternativeE.style.display = "none";
+
+			
+
+			alternativeE.style.display = "none";
+			alternativeF.style.display = "none";
+
+
+
+
+			alternativeG.style.display = "none"
+
+
+
+
+
+
+
 
 			break;
 
@@ -325,9 +830,257 @@ window.addEventListener('load', ()=>{
 		case 'c':
 
 
-			console.log("HAS SELECIONADO LA LETRA 'c' ");
+			pdfImg.style.display = "none";
+
+
+			showTextBot()
+			containerError.style.display = "none";
+
+			buttonTwo.style.display = "block";
+			send.style.display = "none";	
+
+		
+			containerAswer.style.display = "block";
+
+
+
+
+
+			containerInformation.style.display = "none";
+
+
+
+			alternativeC.style.display = "block";
+
+			alternativeA.style.display = "none";
+			alternativeB.style.display = "none";
+			alternativeD.style.display = "none";
+			alternativeE.style.display = "none";
+
+			alternativeE.style.display = "none";
+			alternativeF.style.display = "none";
+
+
+			alternativeG.style.display = "none"
+
+
+
+
+
+
+
+
+
 
 			break;
+
+
+
+
+		case 'd':
+
+
+			pdfImg.style.display = "none";
+
+			showTextBot()
+
+			containerError.style.display = "none";
+
+			buttonTwo.style.display = "block";
+			send.style.display = "none";	
+
+		
+			containerAswer.style.display = "block";
+
+
+
+
+
+			containerInformation.style.display = "none";
+
+			
+			alternativeD.style.display = "block";
+
+
+			alternativeA.style.display = "none";
+			alternativeB.style.display = "none";
+			alternativeC.style.display = "none";
+			alternativeE.style.display = "none";
+
+
+			alternativeE.style.display = "none";
+			alternativeF.style.display = "none";
+
+
+			alternativeG.style.display = "none"
+
+
+
+
+
+
+
+
+			break;
+
+
+
+	
+	case 'e':
+
+
+			pdfImg.style.display = "none";
+
+			showTextBot()
+
+			containerError.style.display = "none";
+
+			buttonTwo.style.display = "block";
+			send.style.display = "none";	
+
+		
+			containerAswer.style.display = "block";
+
+
+
+
+
+			containerInformation.style.display = "none";
+
+			
+			alternativeD.style.display = "none";
+
+
+			alternativeA.style.display = "none";
+			alternativeB.style.display = "none";
+			alternativeC.style.display = "none";
+
+
+			alternativeE.style.display = "block";
+			alternativeF.style.display = "none";
+
+
+			alternativeG.style.display = "none"
+
+
+
+
+
+
+
+
+			break;
+
+
+	case 'f':
+
+
+
+
+
+			var pdfTime = setTimeout(()=>{
+
+
+				pdfImg.style.display = "block";
+
+				pdfImg.style.opacity = 1;
+
+
+
+
+
+			},500);
+
+
+
+
+
+			showTextBot()
+
+			containerError.style.display = "none";
+
+			buttonTwo.style.display = "block";
+			send.style.display = "none";	
+
+		
+			containerAswer.style.display = "block";
+
+
+
+
+
+			containerInformation.style.display = "none";
+
+			
+			alternativeD.style.display = "none";
+
+
+			alternativeA.style.display = "none";
+			alternativeB.style.display = "none";
+			alternativeC.style.display = "none";
+			alternativeE.style.display = "none";
+			alternativeF.style.display = "block";
+			alternativeG.style.display = "none"
+			
+
+
+
+
+
+
+			break;
+
+
+
+
+	case 'g':
+
+
+			pdfImg.style.display = "none";
+
+			showTextBot()
+
+			containerError.style.display = "none";
+
+			buttonTwo.style.display = "block";
+			send.style.display = "none";	
+
+		
+			containerAswer.style.display = "block";
+
+
+
+
+
+			containerInformation.style.display = "none";
+
+			
+			alternativeD.style.display = "none";
+
+
+			alternativeA.style.display = "none";
+			alternativeB.style.display = "none";
+			alternativeC.style.display = "none";
+			alternativeE.style.display = "none";
+			alternativeF.style.display = "none";
+			alternativeG.style.display = "block";
+
+			
+
+
+
+
+
+
+
+
+			break;
+
+
+
+
+
+
 
 
 
@@ -335,6 +1088,17 @@ window.addEventListener('load', ()=>{
 		default:
 
 
+
+
+
+
+
+
+			
+
+			containerError.style.display = "block"
+
+			containerReturn.style.display = "none";
 
 
 
@@ -381,6 +1145,37 @@ window.addEventListener('load', ()=>{
 
 
 
+	var containerRemoveRespuestas;
+
+	function removeRespuesta(){
+
+		containerRemoveRespuestas = setTimeout(() => {
+	
+
+
+
+			setInterval(() => {
+			
+
+				if(letter.value == 'horarios'){
+
+
+				
+					console.log("SET INTERVAL TRUE HORARIOS");
+
+
+					const p = document.createElement('p');
+
+					const li = document.createElement('li');
+
+
+					p.textContent = "horarios";
+
+
+					li.appendChild(p);
+
+
+					contentAswer.appendChild(li)
 
 
 
@@ -388,18 +1183,24 @@ window.addEventListener('load', ()=>{
 
 
 
+				}
+
+
+			}, 1000);
+
+
+
+			alert("SETTIMEOUT TRUE")
 
 
 
 
+	
+	}, 1200);
 
 
 
-
-
-
-
-
+	}
 
 
 
